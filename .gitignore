@@ -1,0 +1,70 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lib
+*.a
+
+# Executable files
+*.exe
+*.out
+*.app
+
+# CUDA-generated files
+*.ptx
+*.cubin
+
+# CMake build artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+
+# IDE Specific
+# CLion
+.idea/
+cmake-build-debug/
+cmake-build-release/
+# Visual Studio
+.vscode/
+.vs/
+*.vcxproj*
+*.pdb
+*.sln
+*.user
+*.opensdf
+*.log
+
+# Logs and databases
+*.log
+*.db
+*.sql
+*.sqlite
+
+# Python virtual environments (if used for helper scripts)
+__pycache__/
+*.py[cod]
+*.venv/
+env/
+venv/
+
+# Temporary files
+*.swp
+*.tmp
+*.temp
+*~
+
+# Other
+*.DS_Store
+Thumbs.db
+
+
+# cache
+.cache/*
