@@ -22,13 +22,18 @@ file(GLOB SOURCES src/*.cpp src/*.cu)
 enable_language(CUDA)
 
 # Specify the executable target
-add_executable(CUDA.app Main.cpp ${SOURCES})
+add_executable(Basic.app examples/Basic.cpp ${SOURCES})
+add_executable(Tile.app examples/Tile.cpp ${SOURCES})
 
 # Set the target properties for CUDA compilation
-set_target_properties(CUDA.app PROPERTIES
+set_target_properties(Basic.app PROPERTIES
+    CUDA_SEPARABLE_COMPILATION ON
+)
+set_target_properties(Tile.app PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )
 
 # Link CUDA libraries
 find_package(CUDAToolkit REQUIRED)
-target_link_libraries(CUDA.app PRIVATE CUDA::cudart)
+target_link_libraries(Basic.app PRIVATE CUDA::cudart)
+target_link_libraries(Tile.app PRIVATE CUDA::cudart)
